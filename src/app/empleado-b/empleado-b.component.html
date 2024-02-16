@@ -1,4 +1,11 @@
 <div>
   <p>Yo soy empleado-b-component</p>
+  <p>Nombre: {{nombre}}</p>
+  <p>Apellido: {{SetApelldio.value}}</p>
+  <p>Empresa: {{SetEmpresa.value}}</p>
+  Introduce la empresa <input type="text" #SetEmpresa>
+  <input type="button" value="Registra" (click)="IntroduceEmpresa(SetEmpresa.value)">
+  <br/>
+  Introduce apelldio: <input type="text" #SetApelldio (keyup)="0">
 </div>
 

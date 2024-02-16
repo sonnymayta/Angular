@@ -8,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrl: './empleado-a.component.css'
 })
 export class EmpleadoAComponent {
+  // Encapsulamos el nombre y apellido
+  private nombre: string = 'Sonny';
+  private apellido: string = 'Mayta';
+  edad: number = 18;
+  empresa: string = 'Google';
 
+  GetNombre() {
+    return this.nombre;
+  }
+
+  GetApellido() {
+    return this.apellido;
+  }
 }
