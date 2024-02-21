@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class EmpleadoBComponent {
   nombre: string = 'Sonny';  
-  apelldio: string = 'Mayta';
+  // apelldio: string = 'Mayta';
 
   IntroduceEmpresa(value: string) {
   }
