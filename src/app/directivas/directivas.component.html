@@ -1,0 +1,22 @@
+<!-- 
+  DIRECTIVAS
+  Son elementos que se aplica a etiquetas HTML que añaden funcionalidades a la etiqueta donde
+  se aplican. 
+  Nos permitiran modificar la estructura del DOM, su apariencia.
+  Tipos de directivas:
+  - Componente (Angular(@Component, @Module), Personalizadas(Custom))
+  - Estructural (ngClass, ngStyle, ngModel)
+  - Atributo (ngIf, ngFor, nfSwitch, ngPlural, ngTemplate, ngComponentOutlet)
+-->
+<div>
+  <h1>Directivas</h1>
+  <form>
+    <input type="text" name="nombre" [(ngModel)]="nombre">
+    <br/>
+    <input type="text" name="apellido" [(ngModel)]="apellido">
+    <br/>
+    <input type="button" value="Registrar" (click)="RegistrarUsuario()">
+  </form>
+  <p *ngIf="registrado">{{ mensaje }} con el nombre de {{ nombre }} {{ apellido }}.</p>
+</div>
+
