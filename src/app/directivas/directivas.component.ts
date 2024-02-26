@@ -14,6 +14,17 @@ export class DirectivasComponent {
   registrado: boolean = false;
   nombre: string = "";
   apellido: string = "";
+  entradas: { titulo: string }[];
+
+  constructor() {
+    this.entradas = [
+      { titulo: "Python" },
+      { titulo: "C#" },
+      { titulo: "JavaScript" },
+      { titulo: "Dart" },
+      { titulo: "Kotlin" },
+    ]
+  }  
 
   RegistrarUsuario() {
     this.registrado = true;

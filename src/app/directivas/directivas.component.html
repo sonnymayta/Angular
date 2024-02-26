@@ -17,6 +17,19 @@
     <br/>
     <input type="button" value="Registrar" (click)="RegistrarUsuario()">
   </form>
-  <p *ngIf="registrado">{{ mensaje }} con el nombre de {{ nombre }} {{ apellido }}.</p>
+  <!-- Directiva ngIf y uso del else -->
+  <p *ngIf="registrado == true else sinRegistro">{{ mensaje }} con el nombre de {{ nombre }} {{ apellido }}.</p>
+
+  <!-- ng-template no renderiza nada por defecto -->
+  <ng-template #sinRegistro>
+    <p>No hay nadie registrado.</p>
+  </ng-template>
+
+  <br>
+
+  <!-- Directiva ngFor -->
+  <ul>
+    <li *ngFor="let entrada of entradas; let i=index">{{ entrada.titulo }} nro. entrada {{ i }}</li>
+  </ul>
 </div>
 
