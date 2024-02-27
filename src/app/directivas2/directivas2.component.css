@@ -1,0 +1,11 @@
+div {
+  background-color: aquamarine;
+  padding: 1rem;
+}
+
+.paraDirectores {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 15px;
+}

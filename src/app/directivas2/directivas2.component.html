@@ -1,0 +1,19 @@
+<div>
+  <h1>{{ titulo }}</h1>
+  <form>
+    <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre"><br>
+    <input type="text" name="apellido" id="apellido" [(ngModel)]="apellido"><br>
+    <input type="text" name="cargo" id="cargo" [(ngModel)]="cargo"><br>
+    <input type="submit" value="Registrar" (click)="RegistrarUsuario()">
+  </form>
+  
+  <!-- Directiva ngStyke -->
+  <!-- <p *ngIf="registrado == true else sinRegistro">{{ mensaje }} con el nombre de {{ nombre }} {{ apellido }} y con el cargo <span [ngStyle]="{color: cargo == 'director' ? 'red' : 'black'}">{{ cargo }}</span>.</p> -->
+  
+  <!-- Directiva ngClass -->
+  <p *ngIf="registrado == true else sinRegistro">{{ mensaje }} con el nombre de {{ nombre }} {{ apellido }} y con el cargo <span [ngClass]="{ paraDirectores: cargo == 'director' }">{{ cargo }}</span>.</p>
+    <!-- ng-template no renderiza nada por defecto -->
+    <ng-template #sinRegistro>
+      <p>No hay nadie registrado.</p>
+    </ng-template>
+</div>
