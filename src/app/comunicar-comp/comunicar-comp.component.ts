@@ -30,6 +30,5 @@ export class ComunicarCompComponent {
     let miEmpleado = new Empleado(this.cuadroNombre, this.cuadroApellido, this.cuadroCargo, this.cuadroSalario);
     this.empleados.push(miEmpleado);
 
-  }
-
+  }  
 }

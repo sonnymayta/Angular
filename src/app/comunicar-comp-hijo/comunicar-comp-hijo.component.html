@@ -4,6 +4,12 @@
       <div >
         {{ indice + 1 }} - {{ empleadoLista.nombre }} {{ empleadoLista.apellido }} {{ empleadoLista.cargo }} {{ empleadoLista.salario }}
       </div>
+
+      <app-comunicar-comp-padre (caracteristicasEmpleados)="agregarCaracteristica($event)"></app-comunicar-comp-padre>
+      
     </div>
+    <ul>
+      <li *ngFor="let caracteristicas of arrayCaracteristicas">{{ caracteristicas }}</li>
+    </ul>
   </div>
 </div>
