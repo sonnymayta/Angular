@@ -14,11 +14,12 @@ export class ComunicarCompHijoComponent {
 
   // Establecemos la comunicación inicializando las variables del padre
   @Input() empleadoLista: Empleado = new Empleado();
+  // @Input() empleadoLista: Empleado | undefined;
   @Input() indice: number = 0;
   
   arrayCaracteristicas = [''];
 
   agregarCaracteristica(nuevaCaracteristica: string) {
-    this.arrayCaracteristicas.push(nuevaCaracteristica);
+    // this.arrayCaracteristicas.push(nuevaCaracteristica);
   }
 }
