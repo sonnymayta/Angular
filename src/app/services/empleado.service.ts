@@ -7,6 +7,7 @@ import { ServicioEmpleadoService } from '../servicio-empleado.service';
 })
 export class EmpleadoService {
 
+  // Tambien es posible injectar servicios a servicios en este caso utilizamos el servicio que nos proporciona un mensaje emergente al servicio que lo registra
   constructor(private mensajeServicio: ServicioEmpleadoService) { }
 
   empleados: Empleado[] = [

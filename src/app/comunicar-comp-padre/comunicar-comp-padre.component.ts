@@ -11,12 +11,14 @@ import { ServicioEmpleadoService } from '../servicio-empleado.service';
 })
 export class ComunicarCompPadreComponent {
 
+  // Los servicios son injectados mediante el constructor del componente
   constructor(private servicioEmpleadoService: ServicioEmpleadoService) {
     
   }
 
   @Output() caracteristicasEmpleados = new EventEmitter<string>();
 
+  // Utilizamos el método que nos proporciona el servicio
   agregarCaracteristicas(value: string) {
     this.caracteristicasEmpleados.emit(value);
     this.servicioEmpleadoService.MuestraMensaje("Registro de caracteristica: " + value)
